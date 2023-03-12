@@ -1,1 +1,0 @@
-https://RomanKadevich.github.io/rsschool-cv/
