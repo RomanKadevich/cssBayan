@@ -33,7 +33,7 @@ img {
 }
 
 .section {
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 10%;
 }
 
@@ -49,12 +49,13 @@ img {
     display: inline-block;
     cursor: pointer;
 }
+
 .header~.accordion .accordion__icon {
-    transition: transform 400ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
 }
+
 .header:hover~.accordion .accordion__icon {
-    transform: scale(1);
-    
+    opacity: 1;
 }
 
 
@@ -91,14 +92,12 @@ img {
 
 .accordion__img {
     display: block;
-
     transform: scale(0);
 }
 
 .accordion__icon {
     display: inline-block;
-
-    transform: scale(0);
+    opacity: 0;
 }
 
 .accordion__item .accordion__img {
@@ -112,22 +111,17 @@ img {
 
 }
 
-.accordion .accordion__icon {
-    transition: transform 400ms ease-in-out;
-}
+.accordion .accordion__icon {}
 
 .accordion:hover .accordion__icon {
-    transform: scale(1);
-   
+    opacity: 1;
+    transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+
 }
 
-.accordion__label .accordion__icon {
-    transition: transform 400ms ease-in-out;
-}
 
 .accordion__label:hover .accordion__icon {
-    
-    transform: scale(1);
+    opacity: 1;
     transform: rotate(180deg);
 }
 
@@ -154,7 +148,6 @@ img {
 }
 
 .accordion__input:checked~.accordion__content .accordion__img {
-
     height: 100%;
     transform: scale(1);
     margin-top: 1rem;
