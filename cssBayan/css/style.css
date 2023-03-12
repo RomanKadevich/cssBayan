@@ -49,10 +49,12 @@ img {
     display: inline-block;
     cursor: pointer;
 }
-
+.header~.accordion .accordion__icon {
+    transition: transform 400ms ease-in-out;
+}
 .header:hover~.accordion .accordion__icon {
-    opacity: 1;
-    transition: opacity 400ms ease-in-out;
+    transform: scale(1);
+    
 }
 
 
@@ -117,7 +119,6 @@ img {
 .accordion:hover .accordion__icon {
     transform: scale(1);
    
-
 }
 
 .accordion__label .accordion__icon {
@@ -125,6 +126,8 @@ img {
 }
 
 .accordion__label:hover .accordion__icon {
+    
+    transform: scale(1);
     transform: rotate(180deg);
 }
 
