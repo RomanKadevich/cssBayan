@@ -95,7 +95,8 @@ img {
 
 .accordion__icon {
     display: inline-block;
-    opacity: 0;
+
+    transform: scale(0);
 }
 
 .accordion__item .accordion__img {
@@ -110,11 +111,12 @@ img {
 }
 
 .accordion .accordion__icon {
-    transition: opacity 400ms ease-in-out;
+    transition: transform 400ms ease-in-out;
 }
 
 .accordion:hover .accordion__icon {
-    opacity: 1;
+    transform: scale(1);
+   
 
 }
 
