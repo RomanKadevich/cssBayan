@@ -52,13 +52,13 @@ img {
 
 .header:hover~.accordion .accordion__icon {
     opacity: 1;
-    transition: opacity 300ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
 }
 
 
 .header:hover~.accordion .accordion__text {
     color: var(--main-fontcolor);
-    transition: color 300ms ease-in-out;
+    transition: color 400ms ease-in-out;
 
 }
 
@@ -89,7 +89,7 @@ img {
 
 .accordion__img {
     display: block;
-    
+
     transform: scale(0);
 }
 
@@ -97,26 +97,32 @@ img {
     display: inline-block;
     opacity: 0;
 }
+
 .accordion__item .accordion__img {
-    transition: transform 300ms ease-in-out;
+    transition: transform 400ms ease-in-out;
 }
+
 .accordion__item:hover .accordion__img {
-  
-    
     transform: scale(1);
     margin-top: 1rem;
     margin-bottom: 1rem;
 
 }
 
+.accordion .accordion__icon {
+    transition: opacity 400ms ease-in-out;
+}
+
 .accordion:hover .accordion__icon {
     opacity: 1;
-    transition: opacity 300ms ease-in-out;
+
+}
+
+.accordion__label .accordion__icon {
+    transition: transform 400ms ease-in-out;
 }
 
 .accordion__label:hover .accordion__icon {
-    opacity: 1;
-    transition: opacity 300ms ease-in-out;
     transform: rotate(180deg);
 }
 
@@ -126,14 +132,13 @@ img {
 
 .accordion:hover .accordion__text {
     color: var(--main-fontcolor);
-    transition: color 300ms ease-in-out;
+    transition: color 400ms ease-in-out;
 
 }
 
 .accordion__input:checked~.accordion__title .accordion__icon {
     transform: rotate(180deg);
 }
-
 
 .accordion__input:checked~.accordion__title .accordion__text {
     color: var(--main-fontcolor)
@@ -164,17 +169,18 @@ img {
     border-bottom: 0.1rem solid var(--border-color);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 300ms ease-in-out;
+    transition: max-height 400ms ease-in-out;
 
 }
+
 .accordion__item .accordion__content {
-    transition: max-height 300ms ease-in-out;
-    
+    transition: max-height 400ms ease-in-out;
+
 }
 
 .accordion__item:hover .accordion__content {
     max-height: 20rem;
-    
+
 }
 
 .accordion__item:last-child .accordion__content {
