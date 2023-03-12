@@ -1,0 +1,45 @@
+
+
+
+
+@media only screen and (max-device-width:1080px){
+html{
+    font-size: 18px;
+}
+
+}
+
+
+ @media only screen and (max-device-width: 820px) {
+        .header {
+            display: inline-block;
+            cursor:default;
+        }
+        .accordion:hover {
+            cursor: default;
+        }
+        html{
+            font-size: 15px;
+        }
+        .accordion__icon svg {
+            transform: scale(0.8);
+        }
+    }
+    
+
+@media only screen and (max-device-width:568px){
+    html{
+        font-size: 12px;
+    }
+    .accordion__icon svg{
+        transform: scale(0.6);
+    }
+    .accordion__item:hover .accordion__content {
+        max-height: 25rem;
+        
+    }
+    .accordion__input:checked~.accordion__content {
+        max-height: 25rem;
+    }
+}
+
