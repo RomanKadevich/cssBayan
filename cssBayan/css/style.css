@@ -32,21 +32,34 @@ img {
     max-width: 100%;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
 .section {
     padding-top: 10%;
     padding-bottom: 10%;
 }
 
-.accordion__header {
-    text-align: center;
-    margin-bottom: 54px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 5.2%;
+    padding-right: 5.2%;
+}
+
+
+.header {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.header:hover~.accordion .accordion__icon {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+}
+
+
+.header:hover~.accordion .accordion__text {
+    color: var(--main-fontcolor);
+    transition: color 300ms ease-in-out;
+
 }
 
 .accordion {
@@ -76,7 +89,7 @@ img {
 
 .accordion__img {
     display: block;
-    height: 0;
+    
     transform: scale(0);
 }
 
@@ -84,24 +97,16 @@ img {
     display: inline-block;
     opacity: 0;
 }
-
-.accordion__item:hover .accordion__img {
-    height: 100%;
+.accordion__item .accordion__img {
     transition: transform 300ms ease-in-out;
+}
+.accordion__item:hover .accordion__img {
+  
+    
     transform: scale(1);
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-}
-
-.header {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.header:hover~.accordion .accordion__icon {
-    opacity: 1;
-    transition: opacity 300ms ease-in-out;
 }
 
 .accordion:hover .accordion__icon {
@@ -134,6 +139,10 @@ img {
     color: var(--main-fontcolor)
 }
 
+.accordion__input:checked~.accordion__content {
+    max-height: 20rem;
+}
+
 .accordion__input:checked~.accordion__content .accordion__img {
 
     height: 100%;
@@ -142,12 +151,6 @@ img {
     margin-bottom: 1rem;
 }
 
-.accordion__item:active .accordion__img {
-    height: 100%;
-    transition: all 300ms ease-in-out;
-    transform: scale(1);
-
-}
 
 .accordion__label:hover {
     cursor: pointer;
@@ -159,7 +162,19 @@ img {
     justify-content: center;
     background-color: var(--acc-content-bgcolor);
     border-bottom: 0.1rem solid var(--border-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease-in-out;
 
+}
+.accordion__item .accordion__content {
+    transition: max-height 300ms ease-in-out;
+    
+}
+
+.accordion__item:hover .accordion__content {
+    max-height: 20rem;
+    
 }
 
 .accordion__item:last-child .accordion__content {

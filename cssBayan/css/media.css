@@ -1,0 +1,33 @@
+
+
+
+
+@media only screen and (max-device-width:1080px){
+html{
+    font-size: 18px;
+}
+
+}
+
+ @media only screen and (max-device-width: 820px) {
+        .header {
+            display: inline-block;
+            cursor:default;
+        }
+        .accordion:hover {
+            cursor: default;
+        }
+        html{
+            font-size: 15px;
+        }
+        
+}
+    
+
+@media only screen and (max-device-width:568px){
+    html{
+        font-size: 12px;
+    }
+    
+}
+
